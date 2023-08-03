@@ -1,23 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/display.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>izzi_conan_sis</title>
+  <link rel="stylesheet" href="./css/indexmyhome.css">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideToggle("slow");
+    });
+  });
+</script>
+<style>
+  
+#container{
+  width: 940px;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}
+#header{
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #bcbcbc;
+}
 
+#sidebar-left{
+  width: 160px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom:20px;
+  float: left;
+  border: 1px solid #bcbcbc;
+}
+#content{
+  width: 450px;
+  padding: 20px;
+  margin-bottom: 20px;
+  float: left;
+  border: 1px solid #bcbcbc;
+}
+#sidebar-right{
+  width: 160px;
+  padding: 20px;
+  margin-bottom:20px;
+  float: right;
+  border: 1px solid #bcbcbc;
+}
+#footer{
+  clear: both;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: beige;
+  border: solid 1px beige;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li>menu1</li>
-            <li>menu2</li>
-            <li>menu3</li>
-            <li>menu4</li>
-        </ul>
-    </nav>
-</body>
+  <div class="wrap">
+  <div id="container">
+    <div id="header">
+      <div id="flip">caution!!<sup><i>click here</i></sup></div>
+      <div id="panel">이찌,코난,누나</div>
+      <h1 style="text-align: center;">Welcome to the Jungle~</h1>
+    </div>
+    <div id="sidebar-left">
+      <h2>사이드바왼쪽</h2>
+      <ul>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+        <li>Dolor</li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>메인 콘텐츠</h2>
+      <h4>배경음악</h4>
+      <embed src="./medias/Coldplay-09-Amazing Day.mp3" hidden = "true"></embed>
 
+    </div>
+    <div id="sidebar-right">
+      <h2>사이드바오른쪽</h2>
+    </div>
+    <div id="footer">
+      <p>Copyright</p>
+
+    </div>
+  </div>
+
+</div>
+</body>
 </html>
